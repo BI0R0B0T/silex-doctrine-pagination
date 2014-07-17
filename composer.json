@@ -1,0 +1,31 @@
+{
+    "name": "bi0r0b0t/silex-doctrine-pagination",
+    "type": "library",
+    "license": "MIT",
+    "description": "Simple Doctrine Pagination service provider for Silex micro-framework",
+    "keywords": ["silex", "pagination", "Doctrine"],
+    "authors": [
+        {
+            "name": "Mikhail Dolgov",
+            "email": "dolgov@bk.ru"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "doctrine/dbal": "2.2.*"
+    },
+    "require-dev": {
+        "silex/silex": "~1.2",
+        "phpunit/phpunit": "~4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "BI0R0B0T\\SilexDoctrinePagination\\": "src/SilexDoctrinePagination"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
+    }
+}
