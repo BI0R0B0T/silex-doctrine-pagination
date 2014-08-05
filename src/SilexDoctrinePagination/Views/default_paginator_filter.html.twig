@@ -1,0 +1,23 @@
+{% spaceless %}
+<form class="form-inline  pagination pull-right">
+    <div class="form-group">
+        <label class="sr-only" for="paginator_filter_{{ filterCode }}">{{ "Searh in"|trans }}</label>
+        <select
+                class="form-control"
+                id="paginator_filter_{{ filterCode }}"
+                name="{{ filterCode }}"
+                {% if 1 == filterable|length %}disabled="disabled"{% endif %}
+        >
+            {% for value, name in filterable %}
+                <option value="{{ value }}"{% if value == activeFilterCode %} selected="selected" {% endif %}>{{ name|trans }}</option>
+            {% endfor %}
+        </select>
+     </div>
+    <div class="form-group">
+        <label class="sr-only" for="paginator_filter_{{ filterValue }}">{{ "Search value"|trans }}</label>
+        <input type="text" class="form-control" id="paginator_filter_{{ filterValue }}" placeholder="{{ "Search"|trans }}"
+               name="{{ filterValue }}" {% if activeFilterValue %}value="{{  activeFilterValue }}" {% endif %}>
+    </div>
+    <input type="submit" class="btn btn-default" value="{{ "Find"|trans }}" />
+</form>
+{% endspaceless %}

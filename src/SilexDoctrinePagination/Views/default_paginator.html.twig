@@ -1,0 +1,4 @@
+<ul class="pagination">
+{% for link, href in paginator.links %}
+    <li{% if link == paginator.currentPage %} class="active" {% endif %}><a href="{{ href }}">{{ link }}</a></li>
+{% endfor %}</ul>
